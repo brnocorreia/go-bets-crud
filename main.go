@@ -1,12 +1,3 @@
 package main
 
-import(
-	"fmt"
-	"log"
-	"encoding/json"
-	"math/rand"
-	"net/http"
-	"strconv"
-)
-
-main
+func main()
