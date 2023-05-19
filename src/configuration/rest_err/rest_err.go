@@ -1,4 +1,4 @@
-package rest_arr
+package rest_err
 
 import "net/http"
 
