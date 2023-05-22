@@ -9,7 +9,7 @@ import (
 )
 
 func CreateUser(c *gin.Context) {
-	logger.Info("Init CreateUser controller",
+	logger.Info("Init CreateUser controller succesfully.",
 		zap.String("journey", "createUser"),
 	)
 	var UserRequest request.UserRequest
