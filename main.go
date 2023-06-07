@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 
+	"github.com/brnocorreia/go-movies-crud/src/configuration/database/mongodb"
 	"github.com/brnocorreia/go-movies-crud/src/configuration/logger"
 	"github.com/brnocorreia/go-movies-crud/src/controller"
 	"github.com/brnocorreia/go-movies-crud/src/controller/routes"
@@ -17,6 +18,8 @@ func main() {
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
+
+	mongodb.InitConnection()
 
 	// Init dependencies
 	service := service.NewUserDomainService()
