@@ -7,6 +7,7 @@ import (
 	"github.com/brnocorreia/go-movies-crud/src/configuration/validation"
 	"github.com/brnocorreia/go-movies-crud/src/controller/model/request"
 	"github.com/brnocorreia/go-movies-crud/src/model"
+	"github.com/brnocorreia/go-movies-crud/src/view"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 )
@@ -44,6 +45,6 @@ func (uc *userControllerInterface) CreateUser(c *gin.Context) {
 	logger.Info("User created successfully",
 		zap.String("journey", "createUser"))
 
-	c.String(http.StatusOK, "")
+	c.JSON(http.StatusOK, view.ConvertDomainToResponse(domain))
 
 }

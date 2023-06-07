@@ -5,7 +5,7 @@ import (
 	"github.com/brnocorreia/go-movies-crud/src/model"
 )
 
-func convertDomainToResponse(
+func ConvertDomainToResponse(
 	userDomain model.UserDomainInterface,
 ) response.UserResponse {
 	return response.UserResponse{
