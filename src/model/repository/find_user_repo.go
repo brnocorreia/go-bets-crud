@@ -39,7 +39,7 @@ func (ur *userRepository) FindUserByEmail(
 				zap.String("journey", "findUserByEmail"))
 			return nil, rest_err.NewNotFoundError(errorMessage)
 		}
-		errorMessage := "Error trying to find user by email"
+		errorMessage := "Error trying to find user by email."
 		logger.Error(errorMessage,
 			err,
 			zap.String("journey", "findUserByEmail"))
