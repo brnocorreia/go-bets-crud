@@ -9,6 +9,7 @@ import (
 	"github.com/brnocorreia/go-movies-crud/src/model/repository/entity"
 	"github.com/brnocorreia/go-movies-crud/src/model/repository/entity/converter"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.uber.org/zap"
 	"os"
@@ -65,7 +66,9 @@ func (ur *userRepository) FindUserByID(
 
 	userEntity := &entity.UserEntity{}
 
-	filter := bson.D{{"_id", id}}
+	objectId, _ := primitive.ObjectIDFromHex(id)
+
+	filter := bson.D{{"_id", objectId}}
 	err := collection.FindOne(
 		context.Background(),
 		filter,
