@@ -40,6 +40,10 @@ func (uc *userControllerInterface) CreateUser(c *gin.Context) {
 
 	domainResult, err := uc.service.CreateUserServices(domain)
 	if err != nil {
+		logger.Error("Error trying to call  findUserById services",
+			err,
+			zap.String("journey", "FindUserByID"),
+		)
 		c.JSON(err.Code, err)
 		return
 	}
