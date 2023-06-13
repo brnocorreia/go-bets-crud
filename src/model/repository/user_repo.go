@@ -27,9 +27,10 @@ type UserRepository interface {
 		userDomain model.UserDomainInterface,
 	) (model.UserDomainInterface, *rest_err.RestErr)
 
-	UpdateUser(
+	UpdateUser(userId string, userDomain model.UserDomainInterface) *rest_err.RestErr
+
+	DeleteUser(
 		userId string,
-		userDomain model.UserDomainInterface,
 	) *rest_err.RestErr
 
 	FindUserByEmail(

@@ -27,7 +27,7 @@ func (ur *userRepository) CreateUser(
 	if err != nil {
 		logger.Error("Error trying to create user",
 			err,
-			zap.String("journey", "updateUser"))
+			zap.String("journey", "createUser"))
 		return nil, rest_err.NewInternalServerError(err.Error(), []rest_err.Causes{})
 	}
 

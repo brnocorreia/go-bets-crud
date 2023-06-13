@@ -3,6 +3,7 @@ package model
 import (
 	"crypto/md5"
 	"encoding/hex"
+	"time"
 )
 
 type UserDomainInterface interface {
@@ -11,40 +12,50 @@ type UserDomainInterface interface {
 	GetName() string
 	GetAge() int8
 	GetID() string
+	GetNationality() string
+	GetCreatedAt() time.Time
 
 	SetID(string)
 
 	EncryptPassword()
 }
 
-func NewUserDomain(
-	email, password, name string,
-	age int8,
-) UserDomainInterface {
+func NewUserDomain(email, password, name string, age int8, nationality string, createdAt time.Time) UserDomainInterface {
 	return &userDomain{
-		email:    email,
-		password: password,
-		name:     name,
-		age:      age,
+		email:       email,
+		password:    password,
+		name:        name,
+		age:         age,
+		nationality: nationality,
+		createdAt:   createdAt,
 	}
 }
 
-func NewUserUpdateDomain(
-	name string,
-	age int8,
-) UserDomainInterface {
+func NewUserUpdateDomain(name string, age int8, nationality string) UserDomainInterface {
 	return &userDomain{
-		name: name,
-		age:  age,
+		name:        name,
+		age:         age,
+		nationality: nationality,
 	}
 }
 
 type userDomain struct {
-	id       string
-	email    string
-	password string
-	name     string
-	age      int8
+	id          string
+	email       string
+	password    string
+	name        string
+	age         int8
+	nationality string
+	createdAt   time.Time
+}
+
+func (ud *userDomain) GetCreatedAt() time.Time {
+	createdAt := time.Now()
+	return createdAt
+}
+
+func (ud *userDomain) GetNationality() string {
+	return ud.nationality
 }
 
 func (ud *userDomain) SetID(id string) {

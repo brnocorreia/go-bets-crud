@@ -12,10 +12,7 @@ import (
 	"os"
 )
 
-func (ur *userRepository) UpdateUser(
-	userId string,
-	userDomain model.UserDomainInterface,
-) *rest_err.RestErr {
+func (ur *userRepository) UpdateUser(userId string, userDomain model.UserDomainInterface) *rest_err.RestErr {
 
 	logger.Info("Init updateUser repository",
 		zap.String("journey", "updateUser"))
