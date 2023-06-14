@@ -1,0 +1,50 @@
+// Buscar usuário no banco de dados por email
+GET http://localhost:8080/getUserByEmail/bruno@gmail.com
+Accept: application/json
+Authorization:
+###
+
+// Buscar usuário no banco de dados por email
+GET http://localhost:8080/getUserById/64892b205b073ff15954e0a3
+Accept: application/json
+Authorization:
+###
+
+// Criar um usuario dentro do banco de dados
+POST http://localhost:8080/createUser
+Content-Type: application/json
+
+{
+  "email": "bruno12@gmail.com",
+  "age": 23,
+  "password": "bruno#!@!dwdw",
+  "name": "Bruno Correia",
+  "nationality": "Brazil"
+}
+###
+
+// Atualiza um usuario já criado dentro do banco de dados
+PUT http://localhost:8080/updateUser/64892b205b073ff15954e0a3
+Content-Type: application/json
+
+{
+  "email": "joaogaba@test.com",
+  "age": 34,
+  "nationality": "Chile"
+}
+###
+
+// Apaga um usuário do banco de dados dado um userId
+DELETE http://localhost:8080/deleteUser/64893a12696b1c8d49b76c0b
+Accept: application/json
+###
+
+// Realiza o login do usuário com email e senha
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+    "email": "bruno@gmail.com",
+    "password": "bruno#!@!dwdw"
+}
+###

@@ -9,7 +9,7 @@ import (
 
 func (ud *userDomainService) LoginUserServices(
 	userDomain model.UserDomainInterface,
-) (model.UserDomainInterface, *rest_err.RestErr) {
+) (model.UserDomainInterface, string, *rest_err.RestErr) {
 
 	logger.Info("Init LoginUser model",
 		zap.String("journey", "LoginUser"))
@@ -21,11 +21,16 @@ func (ud *userDomainService) LoginUserServices(
 		userDomain.GetPassword(),
 	)
 	if err != nil {
-		return nil, err
+		return nil, "", err
+	}
+
+	token, err := user.GenerateToken()
+	if err != nil {
+		return nil, "", err
 	}
 
 	logger.Info("LoginUser service executed successfully",
 		zap.String("userId", user.GetID()),
 		zap.String("journey", "loginUser"))
-	return user, nil
+	return user, token, nil
 }

@@ -3,6 +3,7 @@ package model
 import (
 	"crypto/md5"
 	"encoding/hex"
+	"github.com/brnocorreia/go-movies-crud/src/configuration/rest_err"
 	"time"
 )
 
@@ -18,6 +19,7 @@ type UserDomainInterface interface {
 	SetID(string)
 
 	EncryptPassword()
+	GenerateToken() (string, *rest_err.RestErr)
 }
 
 func NewUserDomain(email, password, name string, age int8, nationality string, createdAt time.Time) UserDomainInterface {
