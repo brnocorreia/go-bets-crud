@@ -1,8 +1,10 @@
 package controller
 
 import (
+	"fmt"
 	"github.com/brnocorreia/go-movies-crud/src/configuration/logger"
 	"github.com/brnocorreia/go-movies-crud/src/configuration/rest_err"
+	"github.com/brnocorreia/go-movies-crud/src/model"
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.uber.org/zap"
@@ -13,6 +15,14 @@ func (uc *userControllerInterface) DeleteUser(c *gin.Context) {
 	logger.Info("Init DeleteUser controller",
 		zap.String("journey", "DeleteUser"),
 	)
+
+	user, errorAuth := model.VerifyToken(c.Request.Header.Get("Authorization"))
+	if errorAuth != nil {
+		c.JSON(errorAuth.Code, errorAuth)
+		return
+	}
+
+	logger.Info(fmt.Sprintf("User authenticated: %#v", user))
 
 	userId := c.Param("userId")
 	if _, err := primitive.ObjectIDFromHex(userId); err != nil {

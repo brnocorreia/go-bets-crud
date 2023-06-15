@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"fmt"
 	"github.com/brnocorreia/go-movies-crud/src/configuration/logger"
 	"github.com/brnocorreia/go-movies-crud/src/configuration/rest_err"
 	"github.com/brnocorreia/go-movies-crud/src/configuration/validation"
@@ -16,6 +17,15 @@ func (uc *userControllerInterface) UpdateUser(c *gin.Context) {
 	logger.Info("Init UpdateUser controller",
 		zap.String("journey", "UpdateUser"),
 	)
+
+	user, errorAuth := model.VerifyToken(c.Request.Header.Get("Authorization"))
+	if errorAuth != nil {
+		c.JSON(errorAuth.Code, errorAuth)
+		return
+	}
+
+	logger.Info(fmt.Sprintf("User authenticated: %#v", user))
+
 	var UserRequest request.UserUpdateRequest
 
 	if err := c.ShouldBindJSON(&UserRequest); err != nil {

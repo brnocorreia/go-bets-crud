@@ -1,13 +1,13 @@
 // Buscar usuário no banco de dados por email
-GET http://localhost:8080/getUserByEmail/bruno@gmail.com
+GET http://localhost:8080/getUserByEmail/brunok@gmail.com
 Accept: application/json
-Authorization:
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va0BnbWFpbC5jb20iLCJleHAiOjE2ODY5NDI5NTQsImlkIjoiNjQ4YjYzNjEzNTkyMzQ2YTk4NmYxMWQwIiwibmFtZSI6IkJydW5vIENvcnJlaWEiLCJuYXRpb25hbGl0eSI6IkJyYXppbCJ9.ldrxsUIxCSzpAjob8j4ERBV4czyGJepPHGx-UFMljG0
 ###
 
-// Buscar usuário no banco de dados por email
-GET http://localhost:8080/getUserById/64892b205b073ff15954e0a3
+// Buscar usuário no banco de dados pelo ID
+GET http://localhost:8080/getUserById/648b5fc42cc5eaefc4efae38
 Accept: application/json
-Authorization:
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5vMTIxMkBnbWFpbC5jb20iLCJleHAiOjE2ODY5NDIwNjQsImlkIjoiNjQ4YjVmYzQyY2M1ZWFlZmM0ZWZhZTM4IiwibmFtZSI6IkJydW5vIENvcnJlaWEiLCJuYXRpb25hbGl0eSI6IkJyYXppbCJ9.YO9pi6UxKl_RUVWFyUnwKXCAfG3ZPpY3v98bbwNgSlA
 ###
 
 // Criar um usuario dentro do banco de dados
@@ -15,7 +15,7 @@ POST http://localhost:8080/createUser
 Content-Type: application/json
 
 {
-  "email": "bruno12@gmail.com",
+  "email": "brunok@gmail.com",
   "age": 23,
   "password": "bruno#!@!dwdw",
   "name": "Bruno Correia",
@@ -24,19 +24,20 @@ Content-Type: application/json
 ###
 
 // Atualiza um usuario já criado dentro do banco de dados
-PUT http://localhost:8080/updateUser/64892b205b073ff15954e0a3
+PUT http://localhost:8080/updateUser/648b63613592346a986f11d0
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va0BnbWFpbC5jb20iLCJleHAiOjE2ODY5NDI5NTQsImlkIjoiNjQ4YjYzNjEzNTkyMzQ2YTk4NmYxMWQwIiwibmFtZSI6IkJydW5vIENvcnJlaWEiLCJuYXRpb25hbGl0eSI6IkJyYXppbCJ9.ldrxsUIxCSzpAjob8j4ERBV4czyGJepPHGx-UFMljG0
 
 {
-  "email": "joaogaba@test.com",
-  "age": 34,
-  "nationality": "Chile"
+  "age": 24,
+  "nationality": "Portugal"
 }
 ###
 
 // Apaga um usuário do banco de dados dado um userId
-DELETE http://localhost:8080/deleteUser/64893a12696b1c8d49b76c0b
+DELETE http://localhost:8080/deleteUser/648b5fc42cc5eaefc4efae38
 Accept: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjI0LCJlbWFpbCI6ImJydW5va0BnbWFpbC5jb20iLCJleHAiOjE2ODY5NDMxMzYsImlkIjoiNjQ4YjYzNjEzNTkyMzQ2YTk4NmYxMWQwIiwibmFtZSI6IkJydW5vIENvcnJlaWEiLCJuYXRpb25hbGl0eSI6IlBvcnR1Z2FsIn0.f6GXvnqiO6YDWwUbaCXDwWwC5sz2nFSvxDg8zu-p86o
 ###
 
 // Realiza o login do usuário com email e senha
@@ -44,7 +45,7 @@ POST http://localhost:8080/login
 Content-Type: application/json
 
 {
-    "email": "bruno@gmail.com",
+    "email": "brunok@gmail.com",
     "password": "bruno#!@!dwdw"
 }
 ###
