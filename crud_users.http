@@ -1,7 +1,8 @@
 // Buscar usuário no banco de dados por email
 GET http://localhost:8080/getUserByEmail/brunok@gmail.com
 Accept: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va0BnbWFpbC5jb20iLCJleHAiOjE2ODY5NDI5NTQsImlkIjoiNjQ4YjYzNjEzNTkyMzQ2YTk4NmYxMWQwIiwibmFtZSI6IkJydW5vIENvcnJlaWEiLCJuYXRpb25hbGl0eSI6IkJyYXppbCJ9.ldrxsUIxCSzpAjob8j4ERBV4czyGJepPHGx-UFMljG0
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va0BnbWFpbC5jb20iLCJleHAiOjE2ODcwNDI2MDcsImlkIjoiNjQ4Y2U4OWE3NGFhYmQ1YmI0MzI0ZTcwIiwibmFtZSI6IkJydW5vIENvcnJlaWEiLCJuYXRpb25hbGl0eSI6IkJyYXppbCJ9.V-dqPgu06-PaF3wMBiZNxKWePy_J3U5NeCTTfEbf-2I
+
 ###
 
 // Buscar usuário no banco de dados pelo ID
@@ -35,7 +36,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJy
 ###
 
 // Apaga um usuário do banco de dados dado um userId
-DELETE http://localhost:8080/deleteUser/648b5fc42cc5eaefc4efae38
+DELETE http://localhost:8080/deleteUser/648ce87574aabd5bb4324e6f
 Accept: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjI0LCJlbWFpbCI6ImJydW5va0BnbWFpbC5jb20iLCJleHAiOjE2ODY5NDMxMzYsImlkIjoiNjQ4YjYzNjEzNTkyMzQ2YTk4NmYxMWQwIiwibmFtZSI6IkJydW5vIENvcnJlaWEiLCJuYXRpb25hbGl0eSI6IlBvcnR1Z2FsIn0.f6GXvnqiO6YDWwUbaCXDwWwC5sz2nFSvxDg8zu-p86o
 ###

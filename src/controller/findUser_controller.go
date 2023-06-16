@@ -1,10 +1,8 @@
 package controller
 
 import (
-	"fmt"
 	"github.com/brnocorreia/go-movies-crud/src/configuration/logger"
 	"github.com/brnocorreia/go-movies-crud/src/configuration/rest_err"
-	"github.com/brnocorreia/go-movies-crud/src/model"
 	"github.com/brnocorreia/go-movies-crud/src/view"
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/bson/primitive"
@@ -17,14 +15,6 @@ func (uc *userControllerInterface) FindUserByID(c *gin.Context) {
 	logger.Info("Init findUserByIDController controller",
 		zap.String("journey", "FindUserByID"),
 	)
-
-	user, errorAuth := model.VerifyToken(c.Request.Header.Get("Authorization"))
-	if errorAuth != nil {
-		c.JSON(errorAuth.Code, errorAuth)
-		return
-	}
-
-	logger.Info(fmt.Sprintf("User authenticated: %#v", user))
 
 	userId := c.Param("userId")
 
@@ -59,14 +49,6 @@ func (uc *userControllerInterface) FindUserByEmail(c *gin.Context) {
 	logger.Info("Init findUserByEmailController controller",
 		zap.String("journey", "FindUserByID"),
 	)
-
-	user, errorAuth := model.VerifyToken(c.Request.Header.Get("Authorization"))
-	if errorAuth != nil {
-		c.JSON(errorAuth.Code, errorAuth)
-		return
-	}
-
-	logger.Info(fmt.Sprintf("User authenticated: %#v", user))
 
 	email := c.Param("userEmail")
 
