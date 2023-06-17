@@ -4,7 +4,6 @@ import (
 	"crypto/md5"
 	"encoding/hex"
 	"github.com/brnocorreia/go-movies-crud/src/configuration/rest_err"
-	"time"
 )
 
 type UserDomainInterface interface {
@@ -14,7 +13,7 @@ type UserDomainInterface interface {
 	GetAge() int8
 	GetID() string
 	GetNationality() string
-	GetCreatedAt() time.Time
+	GetNickname() string
 
 	SetID(string)
 
@@ -22,14 +21,14 @@ type UserDomainInterface interface {
 	GenerateToken() (string, *rest_err.RestErr)
 }
 
-func NewUserDomain(email, password, name string, age int8, nationality string, createdAt time.Time) UserDomainInterface {
+func NewUserDomain(email, password, name string, age int8, nationality string, nickname string) UserDomainInterface {
 	return &userDomain{
 		email:       email,
 		password:    password,
 		name:        name,
 		age:         age,
 		nationality: nationality,
-		createdAt:   createdAt,
+		nickname:    nickname,
 	}
 }
 
@@ -55,12 +54,11 @@ type userDomain struct {
 	name        string
 	age         int8
 	nationality string
-	createdAt   time.Time
+	nickname    string
 }
 
-func (ud *userDomain) GetCreatedAt() time.Time {
-	createdAt := time.Now()
-	return createdAt
+func (ud *userDomain) GetNickname() string {
+	return ud.nickname
 }
 
 func (ud *userDomain) GetNationality() string {

@@ -16,12 +16,32 @@ POST http://localhost:8080/createUser
 Content-Type: application/json
 
 {
-  "email": "brunok@gmail.com",
+  "email": "brunokkk@gmail.com",
   "age": 23,
   "password": "bruno#!@!dwdw",
   "name": "Bruno Correia",
+  "nickname": "brunin",
   "nationality": "Brazil"
 }
+###
+
+POST http://localhost:8080/createBet
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2trQGdtYWlsLmNvbSIsImV4cCI6MTY4NzA1NTY2NywiaWQiOiI2NDhkMWJhYTdiYTcwYzJhNGFmMDM4Y2UiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVuaW4ifQ.IzLdq1aWuOTxr2XqdV0LogZ7KCTdOGMLleFqx7ra1ho
+
+
+{
+  "nickname": "brunin",
+  "date": "06/16/2023",
+  "bookmaker": "Bet365",
+  "sport": "CS:GO",
+  "description": "Oddik ML vs Seleça do BT",
+  "odd": 1.725,
+  "investment": 65,
+  "tipster": "Telegram",
+  "winner": true
+}
+
 ###
 
 // Atualiza um usuario já criado dentro do banco de dados
@@ -36,9 +56,10 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJy
 ###
 
 // Apaga um usuário do banco de dados dado um userId
-DELETE http://localhost:8080/deleteUser/648ce87574aabd5bb4324e6f
+DELETE http://localhost:8080/deleteUser/648ce89a74aabd5bb4324e70
 Accept: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjI0LCJlbWFpbCI6ImJydW5va0BnbWFpbC5jb20iLCJleHAiOjE2ODY5NDMxMzYsImlkIjoiNjQ4YjYzNjEzNTkyMzQ2YTk4NmYxMWQwIiwibmFtZSI6IkJydW5vIENvcnJlaWEiLCJuYXRpb25hbGl0eSI6IlBvcnR1Z2FsIn0.f6GXvnqiO6YDWwUbaCXDwWwC5sz2nFSvxDg8zu-p86o
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2tAZ21haWwuY29tIiwiZXhwIjoxNjg3MDQ2NDk4LCJpZCI6IjY0OGNmNzZhMWEwNzQxZTZiMGQ5YjY0NiIsIm5hbWUiOiJCcnVubyBDb3JyZWlhIiwibmF0aW9uYWxpdHkiOiJCcmF6aWwiLCJuaWNrbmFtZSI6ImJydW5pbiJ9.E8vfw1aj18clfu_FF2awpmhrEQW9od0wCxfppATN7xw
+
 ###
 
 // Realiza o login do usuário com email e senha
@@ -46,7 +67,8 @@ POST http://localhost:8080/login
 Content-Type: application/json
 
 {
-    "email": "brunok@gmail.com",
+    "email": "brunokkk@gmail.com",
     "password": "bruno#!@!dwdw"
 }
+
 ###

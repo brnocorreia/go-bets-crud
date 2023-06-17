@@ -21,6 +21,7 @@ func (ud *userDomain) GenerateToken() (string, *rest_err.RestErr) {
 	claims := jwt.MapClaims{
 		"id":          ud.id,
 		"email":       ud.email,
+		"nickname":    ud.nickname,
 		"name":        ud.name,
 		"nationality": ud.nationality,
 		"age":         ud.age,
@@ -63,6 +64,7 @@ func VerifyToken(tokenValue string) (UserDomainInterface, *rest_err.RestErr) {
 	return &userDomain{
 		id:          claims["id"].(string),
 		email:       claims["email"].(string),
+		nickname:    claims["nickname"].(string),
 		name:        claims["name"].(string),
 		age:         int8(claims["age"].(float64)),
 		nationality: claims["nationality"].(string),
@@ -100,6 +102,7 @@ func VerifyTokenMiddleware(c *gin.Context) {
 	userDomain := userDomain{
 		id:          claims["id"].(string),
 		email:       claims["email"].(string),
+		nickname:    claims["nickname"].(string),
 		name:        claims["name"].(string),
 		age:         int8(claims["age"].(float64)),
 		nationality: claims["nationality"].(string),

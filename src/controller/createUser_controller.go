@@ -37,7 +37,7 @@ func (uc *userControllerInterface) CreateUser(c *gin.Context) {
 		UserRequest.Name,
 		UserRequest.Age,
 		UserRequest.Nationality,
-		UserRequest.CreatedAt,
+		UserRequest.Nickname,
 	)
 
 	domainResult, err := uc.service.CreateUserServices(domain)

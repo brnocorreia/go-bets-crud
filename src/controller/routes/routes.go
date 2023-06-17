@@ -6,7 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func InitRoutes(r *gin.RouterGroup, userController controller.UserControllerInterface) {
+func InitUserRoutes(r *gin.RouterGroup, userController controller.UserControllerInterface) {
 
 	r.GET("/getUserById/:userId", model.VerifyTokenMiddleware, userController.FindUserByID)
 	r.GET("/getUserByEmail/:userEmail", model.VerifyTokenMiddleware, userController.FindUserByEmail)
@@ -14,4 +14,9 @@ func InitRoutes(r *gin.RouterGroup, userController controller.UserControllerInte
 	r.PUT("/updateUser/:userId", userController.UpdateUser)
 	r.DELETE("/deleteUser/:userId", userController.DeleteUser)
 	r.POST("/login/", userController.LoginUser)
+
+}
+
+func InitBetRoutes(r *gin.RouterGroup, betController controller.BetControllerInterface) {
+	r.POST("/createBet", model.VerifyTokenMiddleware, betController.CreateBet)
 }

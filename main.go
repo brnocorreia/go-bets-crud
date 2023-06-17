@@ -26,14 +26,19 @@ func main() {
 		log.Fatalf("Error trying to connect to database, error=%s \n", err.Error())
 	}
 
-	// Init dependencies
-	repo := repository.NewUserRepository(database)
-	service := service.NewUserDomainService(repo)
-	userController := controller.NewUserControllerInterface(service)
+	// Init user dependencies
+	repo_users := repository.NewUserRepository(database)
+	service_users := service.NewUserDomainService(repo_users)
+	userController := controller.NewUserControllerInterface(service_users)
+
+	repo_bets := repository.NewBetRepository(database)
+	service_bets := service.NewBetDomainService(repo_bets)
+	betController := controller.NewBetControllerInterface(service_bets)
 
 	router := gin.Default()
 
-	routes.InitRoutes(&router.RouterGroup, userController)
+	routes.InitUserRoutes(&router.RouterGroup, userController)
+	routes.InitBetRoutes(&router.RouterGroup, betController)
 
 	if err := router.Run(":8080"); err != nil {
 		log.Fatal(err)

@@ -2,7 +2,6 @@ package entity
 
 import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
-	"time"
 )
 
 type UserEntity struct {
@@ -12,5 +11,5 @@ type UserEntity struct {
 	Name        string             `bson:"name,omitempty"`
 	Age         int8               `bson:"age,omitempty"`
 	Nationality string             `bson:"nationality,omitempty"`
-	CreatedAt   time.Time          `bson:"created_at,omitempty"`
+	Nickname    string             `bson:"nickname,omitempty"`
 }
