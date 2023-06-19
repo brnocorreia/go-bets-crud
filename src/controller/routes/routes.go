@@ -20,4 +20,5 @@ func InitUserRoutes(r *gin.RouterGroup, userController controller.UserController
 
 func InitBetRoutes(r *gin.RouterGroup, betController controller.BetControllerInterface) {
 	r.POST("/createBet", model.VerifyTokenMiddleware, betController.CreateBet)
+	r.GET("/getBetById/:betId", model.VerifyTokenMiddleware, betController.FindBetByID)
 }

@@ -6,7 +6,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJy
 ###
 
 // Buscar usuário no banco de dados pelo ID
-GET http://localhost:8080/getUserById/648b5fc42cc5eaefc4efae38
+GET http://localhost:8080/getUserById/6490ca73386e475afe557b91
 Accept: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2trQGdtYWlsLmNvbSIsImV4cCI6MTY4NzI5NTUxNiwiaWQiOiI2NDhkMWJhYTdiYTcwYzJhNGFmMDM4Y2UiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVuaW4ifQ.4ndXFL7tB-Qqt40lmvzDHZDnnNEA62tyZ6DttDSSn0Y
 ###
@@ -16,12 +16,17 @@ Accept: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2trQGdtYWlsLmNvbSIsImV4cCI6MTY4NzI5NTUxNiwiaWQiOiI2NDhkMWJhYTdiYTcwYzJhNGFmMDM4Y2UiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVuaW4ifQ.4ndXFL7tB-Qqt40lmvzDHZDnnNEA62tyZ6DttDSSn0Y
 ###
 
+GET http://localhost:8080/getBetById/6490dea5ef6c240812b24329
+Accept: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2trQGdtYWlsLmNvbSIsImV4cCI6MTY4NzI5NTUxNiwiaWQiOiI2NDhkMWJhYTdiYTcwYzJhNGFmMDM4Y2UiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVuaW4ifQ.4ndXFL7tB-Qqt40lmvzDHZDnnNEA62tyZ6DttDSSn0Y
+###
+
 // Criar um usuario dentro do banco de dados
 POST http://localhost:8080/createUser
 Content-Type: application/json
 
 {
-  "email": "brunokkaak@gmail.com",
+  "email": "brunokkk@gmail.com",
   "age": 23,
   "password": "bruno#!@!dwdw",
   "name": "Bruno Correia",
@@ -32,19 +37,19 @@ Content-Type: application/json
 
 POST http://localhost:8080/createBet
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2trQGdtYWlsLmNvbSIsImV4cCI6MTY4NzA1NTY2NywiaWQiOiI2NDhkMWJhYTdiYTcwYzJhNGFmMDM4Y2UiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVuaW4ifQ.IzLdq1aWuOTxr2XqdV0LogZ7KCTdOGMLleFqx7ra1ho
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2trQGdtYWlsLmNvbSIsImV4cCI6MTY4NzI5NzAyMCwiaWQiOiI2NDkwY2E3MzM4NmU0NzVhZmU1NTdiOTEiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVuaW5obyJ9.S6zMXqpc5LF50kgk-PZFWO8pjkhe7x0tFpBWqw4lsYA
 
 
 {
-  "nickname": "brunin",
+  "nickname": "bruninho",
   "date": "06/16/2023",
   "bookmaker": "Bet365",
   "sport": "CS:GO",
-  "description": "Oddik ML vs Seleça do BT",
+  "description": "Oddik ML vs Seleção do BT",
   "odd": 1.725,
-  "investment": 65,
+  "investment": 200,
   "tipster": "Telegram",
-  "winner": true
+  "winner": "No"
 }
 
 ###

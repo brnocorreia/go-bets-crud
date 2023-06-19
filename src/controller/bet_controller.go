@@ -15,6 +15,7 @@ func NewBetControllerInterface(
 
 type BetControllerInterface interface {
 	CreateBet(c *gin.Context)
+	FindBetByID(c *gin.Context)
 }
 
 type betControllerInterface struct {

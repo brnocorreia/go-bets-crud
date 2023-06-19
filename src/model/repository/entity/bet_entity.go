@@ -13,8 +13,8 @@ type BetEntity struct {
 	Description string             `bson:"description,omitempty"`
 	Odd         float32            `bson:"odd,omitempty"`
 	Investment  float32            `bson:"investment,omitempty"`
-	Returned    float32            `bson:"return,omitempty"`
+	Returned    float32            `bson:"returned,omitempty"`
 	Profit      float32            `bson:"profit,omitempty"`
 	Tipster     string             `bson:"tipster,omitempty"`
-	Winner      bool               `bson:"winner,omitempty"`
+	Winner      string             `bson:"winner,omitempty"`
 }

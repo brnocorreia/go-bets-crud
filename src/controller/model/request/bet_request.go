@@ -9,5 +9,5 @@ type BetRequest struct {
 	Odd         float32 `json:"odd" binding:"required,gt=1"`
 	Investment  float32 `json:"investment" binding:"required"`
 	Tipster     string  `json:"tipster" binding:"omitempty,min=2,max=30"`
-	Winner      bool    `json:"winner" binding:""`
+	Winner      string  `json:"winner" binding:"required"`
 }

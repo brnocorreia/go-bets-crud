@@ -12,5 +12,5 @@ type BetResponse struct {
 	Returned    float32 `json:"returned"`
 	Profit      float32 `json:"profit"`
 	Tipster     string  `json:"tipster"`
-	Winner      bool    `json:"winner"`
+	Winner      string  `json:"winner"`
 }

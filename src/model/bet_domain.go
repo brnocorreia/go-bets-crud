@@ -12,14 +12,13 @@ type BetDomainInterface interface {
 	GetTipster() string
 	GetNickname() string
 	GetID() string
-	GetWinner() bool
+	GetWinner() string
 
 	SetID(string)
-	SetReturned(returned float32)
 }
 
 func NewBetDomain(nickname, date, bookmaker, sport, description string,
-	odd float32, investment float32, tipster string, winner bool) BetDomainInterface {
+	odd float32, investment float32, tipster string, winner string) BetDomainInterface {
 	return &betDomain{
 		nickname:    nickname,
 		date:        date,
@@ -60,24 +59,24 @@ type betDomain struct {
 	returned    float32
 	profit      float32
 	tipster     string
-	winner      bool
+	winner      string
 }
 
-func (bd *betDomain) GetWinner() bool {
+func (bd *betDomain) GetWinner() string {
 	return bd.winner
 }
 
-func (bd *betDomain) SetReturned(returned float32) {
-	winner := bd.winner
-	if winner {
-		odd := bd.odd
-		investment := bd.investment
-		returned = odd * investment
-	} else {
-		returned = 0
-	}
-	bd.returned = returned
-}
+//func (bd *betDomain) SetReturned(returned float32) {
+//	winner := bd.winner
+//	if winner {
+//		odd := bd.odd
+//		investment := bd.investment
+//		returned = odd * investment
+//	} else {
+//		returned = 0
+//	}
+//	bd.returned = returned
+//}
 
 func (bd *betDomain) GetNickname() string {
 	return bd.nickname
@@ -116,14 +115,24 @@ func (bd *betDomain) GetInvestment() float32 {
 }
 
 func (bd *betDomain) GetReturned() float32 {
-
+	winner := bd.winner
+	returned := 0.00000000000000000000000000000000000000000000000000000000000000000000000000000001
+	if winner == "Yes" {
+		odd := bd.odd
+		investment := bd.investment
+		returned = float64(odd * investment)
+		//} else {
+		//	odd := bd.odd
+		//	investment := bd.investment
+		//	returning := (odd * investment) - (odd * investment)
+		//	returned = float64(returning)
+	}
+	bd.returned = float32(returned)
 	return bd.returned
 }
 
 func (bd *betDomain) GetProfit() float32 {
-	returned := bd.returned
-	investment := bd.investment
-	profit := returned - investment
+	profit := bd.returned - bd.investment
 	bd.profit = profit
 	return bd.profit
 }

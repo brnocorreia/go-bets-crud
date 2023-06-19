@@ -26,4 +26,8 @@ type BetRepository interface {
 	CreateBet(
 		betDomain model.BetDomainInterface,
 	) (model.BetDomainInterface, *rest_err.RestErr)
+
+	FindBetByID(
+		id string,
+	) (model.BetDomainInterface, *rest_err.RestErr)
 }

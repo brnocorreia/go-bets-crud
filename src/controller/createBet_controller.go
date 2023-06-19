@@ -11,10 +11,6 @@ import (
 	"net/http"
 )
 
-var (
-	_ model.BetDomainInterface
-)
-
 func (bc *betControllerInterface) CreateBet(c *gin.Context) {
 	logger.Info("Init CreateBet controller",
 		zap.String("journey", "createBet"),
@@ -26,7 +22,6 @@ func (bc *betControllerInterface) CreateBet(c *gin.Context) {
 			zap.String("journey", "createBet"))
 		restErr := validation.ValidateUserError(err)
 
-		logger.Info("Chegou aqui.")
 		c.JSON(restErr.Code, restErr)
 		return
 	}

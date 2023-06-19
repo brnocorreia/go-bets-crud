@@ -20,4 +20,8 @@ type BetDomainService interface {
 	CreateBetServices(model.BetDomainInterface) (
 		model.BetDomainInterface,
 		*rest_err.RestErr)
+
+	FindBetByIDServices(
+		id string,
+	) (model.BetDomainInterface, *rest_err.RestErr)
 }

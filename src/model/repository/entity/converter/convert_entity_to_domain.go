@@ -20,10 +20,9 @@ func ConvertBetEntityToDomain(
 	entity entity.BetEntity,
 ) model.BetDomainInterface {
 
-	domain := model.NewBetDomain(entity.Nickname, entity.Date, entity.Nickname, entity.Sport, entity.Description,
+	domain := model.NewBetDomain(entity.Nickname, entity.Date, entity.Bookmaker, entity.Sport, entity.Description,
 		entity.Odd, entity.Investment, entity.Tipster, entity.Winner)
 
 	domain.SetID(entity.ID.Hex())
-	domain.SetReturned(entity.Returned)
 	return domain
 }
