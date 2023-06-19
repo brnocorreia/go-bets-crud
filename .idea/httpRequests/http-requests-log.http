@@ -1,3 +1,52 @@
+GET http://localhost:8080/getUserByNickname/bruninho
+Accept: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2trQGdtYWlsLmNvbSIsImV4cCI6MTY4NzI5NTUxNiwiaWQiOiI2NDhkMWJhYTdiYTcwYzJhNGFmMDM4Y2UiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVuaW4ifQ.4ndXFL7tB-Qqt40lmvzDHZDnnNEA62tyZ6DttDSSn0Y
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-19T181511.200.json
+
+###
+
+GET http://localhost:8080/getUserByNickname/brunin
+Accept: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2trQGdtYWlsLmNvbSIsImV4cCI6MTY4NzI5NTUxNiwiaWQiOiI2NDhkMWJhYTdiYTcwYzJhNGFmMDM4Y2UiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVuaW4ifQ.4ndXFL7tB-Qqt40lmvzDHZDnnNEA62tyZ6DttDSSn0Y
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-19T181447.200.json
+
+###
+
+GET http://localhost:8080/getUserByNickname/brunin
+Accept: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2trQGdtYWlsLmNvbSIsImV4cCI6MTY4NzI5NTUxNiwiaWQiOiI2NDhkMWJhYTdiYTcwYzJhNGFmMDM4Y2UiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVuaW4ifQ.4ndXFL7tB-Qqt40lmvzDHZDnnNEA62tyZ6DttDSSn0Y
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-19T181238.400.json
+
+###
+
+POST http://localhost:8080/login
+Content-Type: application/json
+Content-Length: 70
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+    "email": "brunokkk@gmail.com",
+    "password": "bruno#!@!dwdw"
+}
+
+<> 2023-06-19T181156.200.json
+
+###
+
 POST http://localhost:8080/createUser
 Content-Type: application/json
 Content-Length: 161
@@ -941,72 +990,6 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 }
 
 <> 2023-06-16T195647.200.json
-
-###
-
-POST http://localhost:8080/createUser
-Content-Type: application/json
-Content-Length: 131
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "brunok@gmail.com",
-  "age": 23,
-  "password": "bruno#!@!dwdw",
-  "name": "Bruno Correia",
-  "nationality": "Brazil"
-}
-
-<> 2023-06-16T195626.200.json
-
-###
-
-DELETE http://localhost:8080/deleteUser/648ce87574aabd5bb4324e6f
-Accept: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjI0LCJlbWFpbCI6ImJydW5va0BnbWFpbC5jb20iLCJleHAiOjE2ODY5NDMxMzYsImlkIjoiNjQ4YjYzNjEzNTkyMzQ2YTk4NmYxMWQwIiwibmFtZSI6IkJydW5vIENvcnJlaWEiLCJuYXRpb25hbGl0eSI6IlBvcnR1Z2FsIn0.f6GXvnqiO6YDWwUbaCXDwWwC5sz2nFSvxDg8zu-p86o
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-POST http://localhost:8080/createUser
-Content-Type: application/json
-Content-Length: 131
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "brunok@gmail.com",
-  "age": 23,
-  "password": "bruno#!@!dwdw",
-  "name": "Bruno Correia",
-  "nationality": "Brazil"
-}
-
-<> 2023-06-16T195556.400.json
-
-###
-
-POST http://localhost:8080/createUser
-Content-Type: application/json
-Content-Length: 131
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "brunok@gmail.com",
-  "age": 23,
-  "password": "bruno#!@!dwdw",
-  "name": "Bruno Correia",
-  "nationality": "Brazil"
-}
-
-<> 2023-06-16T195549.200.json
 
 ###
 

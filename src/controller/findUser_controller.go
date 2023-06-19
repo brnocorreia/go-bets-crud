@@ -86,18 +86,6 @@ func (uc *userControllerInterface) FindUserByNickname(c *gin.Context) {
 
 	nickname := c.Param("userNickname")
 
-	if _, err := mail.ParseAddress(nickname); err != nil {
-		logger.Error("Error trying to validate userNickname",
-			err,
-			zap.String("journey", "FindUserByNickname"),
-		)
-		errorMessage := rest_err.NewBadRequestError(
-			"UserNickname is not an valid nickname",
-		)
-		c.JSON(errorMessage.Code, errorMessage)
-		return
-	}
-
 	userDomain, err := uc.service.FindUserByNicknameServices(nickname)
 	if err != nil {
 		logger.Error("Error trying to call  findUserByNickname services",
