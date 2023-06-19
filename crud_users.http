@@ -16,11 +16,11 @@ POST http://localhost:8080/createUser
 Content-Type: application/json
 
 {
-  "email": "brunokkk@gmail.com",
+  "email": "brunokkaak@gmail.com",
   "age": 23,
   "password": "bruno#!@!dwdw",
   "name": "Bruno Correia",
-  "nickname": "brunin",
+  "nickname": "bruninho",
   "nationality": "Brazil"
 }
 ###

@@ -45,4 +45,6 @@ type UserRepository interface {
 		email string,
 		password string,
 	) (model.UserDomainInterface, *rest_err.RestErr)
+
+	FindUserByNickname(nickname string) (model.UserDomainInterface, *rest_err.RestErr)
 }

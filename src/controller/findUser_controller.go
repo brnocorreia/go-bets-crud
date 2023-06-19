@@ -78,3 +78,37 @@ func (uc *userControllerInterface) FindUserByEmail(c *gin.Context) {
 	)
 	c.JSON(http.StatusOK, view.ConvertDomainToResponse(userDomain))
 }
+
+func (uc *userControllerInterface) FindUserByNickname(c *gin.Context) {
+	logger.Info("Init findUserByNicknameController controller",
+		zap.String("journey", "FindUserByNickname"),
+	)
+
+	nickname := c.Param("userNickname")
+
+	if _, err := mail.ParseAddress(nickname); err != nil {
+		logger.Error("Error trying to validate userNickname",
+			err,
+			zap.String("journey", "FindUserByNickname"),
+		)
+		errorMessage := rest_err.NewBadRequestError(
+			"UserNickname is not an valid nickname",
+		)
+		c.JSON(errorMessage.Code, errorMessage)
+		return
+	}
+
+	userDomain, err := uc.service.FindUserByNicknameServices(nickname)
+	if err != nil {
+		logger.Error("Error trying to call  findUserByNickname services",
+			err,
+			zap.String("journey", "FindUserByNickname"),
+		)
+		c.JSON(err.Code, err)
+	}
+
+	logger.Info("FindUserByNicknameController controller executed successfully",
+		zap.String("journey", "FindUserByNickname"),
+	)
+	c.JSON(http.StatusOK, view.ConvertDomainToResponse(userDomain))
+}

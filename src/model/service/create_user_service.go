@@ -13,10 +13,16 @@ func (ud *userDomainService) CreateUserServices(
 	logger.Info("Init CreateUser model",
 		zap.String("journey", "CreateUser"))
 
-	user, _ := ud.FindUserByEmailServices(userDomain.GetEmail())
-	if user != nil {
+	email, _ := ud.FindUserByEmailServices(userDomain.GetEmail())
+	if email != nil {
 		return nil, rest_err.NewBadRequestError(
 			"Email already used to register another account. Try another email")
+	}
+
+	nickname, _ := ud.FindUserByNicknameServices(userDomain.GetNickname())
+	if nickname != nil {
+		return nil, rest_err.NewBadRequestError(
+			"Nickname already used. Try another nickname.")
 	}
 
 	userDomain.EncryptPassword()

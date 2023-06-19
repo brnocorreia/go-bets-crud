@@ -25,6 +25,10 @@ type UserDomainService interface {
 		email string,
 	) (model.UserDomainInterface, *rest_err.RestErr)
 
+	FindUserByNicknameServices(
+		nickname string,
+	) (model.UserDomainInterface, *rest_err.RestErr)
+
 	FindUserByIDServices(
 		id string,
 	) (model.UserDomainInterface, *rest_err.RestErr)
