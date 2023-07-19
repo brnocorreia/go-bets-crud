@@ -1,7 +1,7 @@
 // Buscar usuário no banco de dados por email
-GET http://localhost:8080/getUserByEmail/brunok@gmail.com
+GET http://localhost:8080/getUserByEmail/brunocorreia07@gmail.com
 Accept: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va0BnbWFpbC5jb20iLCJleHAiOjE2ODcwNDI2MDcsImlkIjoiNjQ4Y2U4OWE3NGFhYmQ1YmI0MzI0ZTcwIiwibmFtZSI6IkJydW5vIENvcnJlaWEiLCJuYXRpb25hbGl0eSI6IkJyYXppbCJ9.V-dqPgu06-PaF3wMBiZNxKWePy_J3U5NeCTTfEbf-2I
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5vY29ycmVpYTA3QGdtYWlsLmNvbSIsImV4cCI6MTY4OTY5Nzk1MywiaWQiOiI2NGI1NmQxMTQ1MjI1ODI3Yzg0OGVjYWMiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVub2NvcnJlaWEwNyJ9.wkObxlffm8QLubKXfEz_uVGnB2VoZQy1b4CnYy0kA28
 
 ###
 
@@ -16,9 +16,9 @@ Accept: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2trQGdtYWlsLmNvbSIsImV4cCI6MTY4NzI5NTUxNiwiaWQiOiI2NDhkMWJhYTdiYTcwYzJhNGFmMDM4Y2UiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVuaW4ifQ.4ndXFL7tB-Qqt40lmvzDHZDnnNEA62tyZ6DttDSSn0Y
 ###
 
-GET http://localhost:8080/getBetById/6490dea5ef6c240812b24329
+GET http://localhost:8080/getBetById/64b56eb511ddec430d9ec82f
 Accept: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2trQGdtYWlsLmNvbSIsImV4cCI6MTY4NzI5NTUxNiwiaWQiOiI2NDhkMWJhYTdiYTcwYzJhNGFmMDM4Y2UiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVuaW4ifQ.4ndXFL7tB-Qqt40lmvzDHZDnnNEA62tyZ6DttDSSn0Y
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5vY29ycmVpYTA3QGdtYWlsLmNvbSIsImV4cCI6MTY4OTY5Nzk1MywiaWQiOiI2NGI1NmQxMTQ1MjI1ODI3Yzg0OGVjYWMiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVub2NvcnJlaWEwNyJ9.wkObxlffm8QLubKXfEz_uVGnB2VoZQy1b4CnYy0kA28
 ###
 
 // Criar um usuario dentro do banco de dados
@@ -26,27 +26,27 @@ POST http://localhost:8080/createUser
 Content-Type: application/json
 
 {
-  "email": "brunokkk@gmail.com",
+  "email": "brunocorreia07@gmail.com",
   "age": 23,
   "password": "bruno#!@!dwdw",
   "name": "Bruno Correia",
-  "nickname": "bruninho",
+  "nickname": "brunocorreia07",
   "nationality": "Brazil"
 }
 ###
 
 POST http://localhost:8080/createBet
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2trQGdtYWlsLmNvbSIsImV4cCI6MTY4NzI5NzAyMCwiaWQiOiI2NDkwY2E3MzM4NmU0NzVhZmU1NTdiOTEiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVuaW5obyJ9.S6zMXqpc5LF50kgk-PZFWO8pjkhe7x0tFpBWqw4lsYA
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5vY29ycmVpYTA3QGdtYWlsLmNvbSIsImV4cCI6MTY4OTY5Nzk1MywiaWQiOiI2NGI1NmQxMTQ1MjI1ODI3Yzg0OGVjYWMiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVub2NvcnJlaWEwNyJ9.wkObxlffm8QLubKXfEz_uVGnB2VoZQy1b4CnYy0kA28
 
 
 {
-  "nickname": "bruninho",
-  "date": "06/16/2023",
+  "nickname": "brunocorreia07",
+  "date": "07/16/2023",
   "bookmaker": "Bet365",
-  "sport": "CS:GO",
-  "description": "Oddik ML vs Seleção do BT",
-  "odd": 1.725,
+  "sport": "Futebol",
+  "description": "Fluminense vs Flamengo - Over 2.5 gols",
+  "odd": 1.9,
   "investment": 200,
   "tipster": "Telegram",
   "winner": "No"
@@ -77,7 +77,7 @@ POST http://localhost:8080/login
 Content-Type: application/json
 
 {
-    "email": "brunokkk@gmail.com",
+    "email": "brunocorreia07@gmail.com",
     "password": "bruno#!@!dwdw"
 }
 

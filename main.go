@@ -27,13 +27,13 @@ func main() {
 	}
 
 	// Init user dependencies
-	repo_users := repository.NewUserRepository(database)
-	service_users := service.NewUserDomainService(repo_users)
-	userController := controller.NewUserControllerInterface(service_users)
+	repoUsers := repository.NewUserRepository(database)
+	serviceUsers := service.NewUserDomainService(repoUsers)
+	userController := controller.NewUserControllerInterface(serviceUsers)
 
-	repo_bets := repository.NewBetRepository(database)
-	service_bets := service.NewBetDomainService(repo_bets)
-	betController := controller.NewBetControllerInterface(service_bets)
+	repoBets := repository.NewBetRepository(database)
+	serviceBets := service.NewBetDomainService(repoBets)
+	betController := controller.NewBetControllerInterface(serviceBets)
 
 	router := gin.Default()
 

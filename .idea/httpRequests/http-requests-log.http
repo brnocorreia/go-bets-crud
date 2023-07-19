@@ -1,3 +1,120 @@
+GET http://localhost:8080/getBetById/64b56eb511ddec430d9ec82f
+Accept: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5vY29ycmVpYTA3QGdtYWlsLmNvbSIsImV4cCI6MTY4OTY5Nzk1MywiaWQiOiI2NGI1NmQxMTQ1MjI1ODI3Yzg0OGVjYWMiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVub2NvcnJlaWEwNyJ9.wkObxlffm8QLubKXfEz_uVGnB2VoZQy1b4CnYy0kA28
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-17T133949.200.json
+
+###
+
+POST http://localhost:8080/createBet
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5vY29ycmVpYTA3QGdtYWlsLmNvbSIsImV4cCI6MTY4OTY5Nzk1MywiaWQiOiI2NGI1NmQxMTQ1MjI1ODI3Yzg0OGVjYWMiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVub2NvcnJlaWEwNyJ9.wkObxlffm8QLubKXfEz_uVGnB2VoZQy1b4CnYy0kA28
+Content-Length: 242
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "nickname": "brunocorreia07",
+  "date": "07/16/2023",
+  "bookmaker": "Bet365",
+  "sport": "Futebol",
+  "description": "Fluminense vs Flamengo - Over 2.5 gols",
+  "odd": 1.9,
+  "investment": 200,
+  "tipster": "Telegram",
+  "winner": "No"
+}
+
+<> 2023-07-17T133917.200.json
+
+###
+
+GET http://localhost:8080/getUserByEmail/brunocorreia07@gmail.com
+Accept: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5vY29ycmVpYTA3QGdtYWlsLmNvbSIsImV4cCI6MTY4OTY5Nzk1MywiaWQiOiI2NGI1NmQxMTQ1MjI1ODI3Yzg0OGVjYWMiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVub2NvcnJlaWEwNyJ9.wkObxlffm8QLubKXfEz_uVGnB2VoZQy1b4CnYy0kA28
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-17T133851.200.json
+
+###
+
+POST http://localhost:8080/createBet
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5vY29ycmVpYTA3QGdtYWlsLmNvbSIsImV4cCI6MTY4OTY5Nzk1MywiaWQiOiI2NGI1NmQxMTQ1MjI1ODI3Yzg0OGVjYWMiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVub2NvcnJlaWEwNyJ9.wkObxlffm8QLubKXfEz_uVGnB2VoZQy1b4CnYy0kA28
+Content-Length: 228
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "nickname": "brunocorreia07",
+  "date": "07/16/2023",
+  "bookmaker": "Bet365",
+  "sport": "Futebol",
+  "description": "São Paulo ML vs Santos",
+  "odd": 1.9,
+  "investment": 200,
+  "tipster": "Telegram",
+  "winner": "Yes"
+}
+
+<> 2023-07-17T133334.200.json
+
+###
+
+GET http://localhost:8080/getUserByEmail/brunocorreia07@gmail.com
+Accept: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5vY29ycmVpYTA3QGdtYWlsLmNvbSIsImV4cCI6MTY4OTY5Nzk1MywiaWQiOiI2NGI1NmQxMTQ1MjI1ODI3Yzg0OGVjYWMiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVub2NvcnJlaWEwNyJ9.wkObxlffm8QLubKXfEz_uVGnB2VoZQy1b4CnYy0kA28
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-17T133314.200.json
+
+###
+
+POST http://localhost:8080/login
+Content-Type: application/json
+Content-Length: 76
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+    "email": "brunocorreia07@gmail.com",
+    "password": "bruno#!@!dwdw"
+}
+
+<> 2023-07-17T133233.200.json
+
+###
+
+POST http://localhost:8080/createUser
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "brunocorreia07@gmail.com",
+  "age": 23,
+  "password": "bruno#!@!dwdw",
+  "name": "Bruno Correia",
+  "nickname": "brunocorreia07",
+  "nationality": "Brazil"
+}
+
+<> 2023-07-17T133217.200.json
+
+###
+
 GET http://localhost:8080/getBetById/6490dea5ef6c240812b24329
 Accept: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2trQGdtYWlsLmNvbSIsImV4cCI6MTY4NzI5NTUxNiwiaWQiOiI2NDhkMWJhYTdiYTcwYzJhNGFmMDM4Y2UiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVuaW4ifQ.4ndXFL7tB-Qqt40lmvzDHZDnnNEA62tyZ6DttDSSn0Y
@@ -835,174 +952,6 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 }
 
 <> 2023-06-19T174511.200.json
-
-###
-
-POST http://localhost:8080/createBet
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2trQGdtYWlsLmNvbSIsImV4cCI6MTY4NzA1NTY2NywiaWQiOiI2NDhkMWJhYTdiYTcwYzJhNGFmMDM4Y2UiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVuaW4ifQ.IzLdq1aWuOTxr2XqdV0LogZ7KCTdOGMLleFqx7ra1ho
-Content-Length: 220
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "nickname": "brunin",
-  "date": "06/16/2023",
-  "bookmaker": "Bet365",
-  "sport": "CS:GO",
-  "description": "Oddik ML vs Seleça do BT",
-  "odd": 1.725,
-  "investment": 65,
-  "tipster": "Telegram",
-  "winner": true
-}
-
-<> 2023-06-17T011515.200.json
-
-###
-
-POST http://localhost:8080/createBet
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzzzzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2trQGdtYWlsLmNvbSIsImV4cCI6MTY4NzA1NTY2NywiaWQiOiI2NDhkMWJhYTdiYTcwYzJhNGFmMDM4Y2UiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVuaW4ifQ.IzLdq1aWuOTxr2XqdV0LogZ7KCTdOGMLleFqx7ra1ho
-Content-Length: 220
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "nickname": "brunin",
-  "date": "06/16/2023",
-  "bookmaker": "Bet365",
-  "sport": "CS:GO",
-  "description": "Oddik ML vs Seleça do BT",
-  "odd": 1.725,
-  "investment": 65,
-  "tipster": "Telegram",
-  "winner": true
-}
-
-<> 2023-06-17T011509.401.json
-
-###
-
-POST http://localhost:8080/createBet
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2trQGdtYWlsLmNvbSIsImV4cCI6MTY4NzA1NTY2NywiaWQiOiI2NDhkMWJhYTdiYTcwYzJhNGFmMDM4Y2UiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVuaW4ifQ.IzLdq1aWuOTxr2XqdV0LogZ7KCTdOGMLleFqx7ra1ho
-Content-Length: 220
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "nickname": "brunin",
-  "date": "06/16/2023",
-  "bookmaker": "Bet365",
-  "sport": "CS:GO",
-  "description": "Oddik ML vs Seleça do BT",
-  "odd": 1.725,
-  "investment": 65,
-  "tipster": "Telegram",
-  "winner": true
-}
-
-<> 2023-06-17T011305.200.json
-
-###
-
-POST http://localhost:8080/createBet
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2trQGdtYWlsLmNvbSIsImV4cCI6MTY4NzA1NTY2NywiaWQiOiI2NDhkMWJhYTdiYTcwYzJhNGFmMDM4Y2UiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVuaW4ifQ.IzLdq1aWuOTxr2XqdV0LogZ7KCTdOGMLleFqx7ra1ho
-Content-Length: 221
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "nickname": "brunin",
-  "date": "06/16/2023",
-  "bookmaker": "Bet365",
-  "sport": "CS:GO",
-  "description": "Oddik ML vs Seleça do BT",
-  "odd": 1.725,
-  "investment": 300,
-  "tipster": "Telegram",
-  "winner": true
-}
-
-<> 2023-06-17T011251.200.json
-
-###
-
-POST http://localhost:8080/createBet
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2trQGdtYWlsLmNvbSIsImV4cCI6MTY4NzA1NTY2NywiaWQiOiI2NDhkMWJhYTdiYTcwYzJhNGFmMDM4Y2UiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVuaW4ifQ.IzLdq1aWuOTxr2XqdV0LogZ7KCTdOGMLleFqx7ra1ho
-Content-Length: 220
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "nickname": "brunin",
-  "date": "06/16/2023",
-  "bookmaker": "Bet365",
-  "sport": "CS:GO",
-  "description": "Oddik ML vs Seleça do BT",
-  "odd": 1.72,
-  "investment": 300,
-  "tipster": "Telegram",
-  "winner": true
-}
-
-<> 2023-06-17T011235.200.json
-
-###
-
-POST http://localhost:8080/createBet
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2trQGdtYWlsLmNvbSIsImV4cCI6MTY4NzA1NTY2NywiaWQiOiI2NDhkMWJhYTdiYTcwYzJhNGFmMDM4Y2UiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVuaW4ifQ.IzLdq1aWuOTxr2XqdV0LogZ7KCTdOGMLleFqx7ra1ho
-Content-Length: 214
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "nickname": "brunin",
-  "date": "06/16/2023",
-  "bookmaker": "Bet365",
-  "sport": "CS:GO",
-  "description": "FURIA ML vs Heroic",
-  "odd": 2.77,
-  "investment": 300,
-  "tipster": "Telegram",
-  "winner": false
-}
-
-<> 2023-06-17T011027.400.json
-
-###
-
-POST http://localhost:8080/createBet
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIzLCJlbWFpbCI6ImJydW5va2trQGdtYWlsLmNvbSIsImV4cCI6MTY4NzA1NTY2NywiaWQiOiI2NDhkMWJhYTdiYTcwYzJhNGFmMDM4Y2UiLCJuYW1lIjoiQnJ1bm8gQ29ycmVpYSIsIm5hdGlvbmFsaXR5IjoiQnJhemlsIiwibmlja25hbWUiOiJicnVuaW4ifQ.IzLdq1aWuOTxr2XqdV0LogZ7KCTdOGMLleFqx7ra1ho
-Content-Length: 214
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "nickname": "brunin",
-  "date": "06/16/2023",
-  "bookmaker": "Bet365",
-  "sport": "CS:GO",
-  "description": "FURIA ML vs Heroic",
-  "odd": 2.77,
-  "investment": 300,
-  "tipster": "Telegram",
-  "winner": false
-}
-
-<> 2023-06-17T011006.400.json
 
 ###
 
